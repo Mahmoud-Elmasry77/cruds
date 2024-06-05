@@ -1,0 +1,114 @@
+body{
+    background-color: #111;
+    padding: 0;
+    margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+.cruds{
+    width: 80%;
+    margin: auto;
+}
+.head{
+    text-align: center;
+    text-transform: uppercase;
+    margin: 10px 0;
+}
+
+input{
+    width: 100%;
+    background-color: #444;
+    outline: none;
+    border: none;
+    height: 30px;
+    padding: 5px;
+    color: #fff;
+    margin: 5px 0;
+    border-radius: 4px;
+    transition: .5s;
+}
+input:focus{
+    transform: scale(1.1);
+    background-color: #333;
+}
+
+.price input{
+    width: 20%;
+}
+
+#total{
+   background-color: #a52929;
+   border-radius: 4px;
+   padding: 5px;
+}
+#total::before{
+    content: "Total:";
+}
+
+button{
+    width: 100%;
+    border: none;
+    height: 30px;
+    border-radius: 30px;
+    cursor: pointer;
+    background-color: #171150;
+    color: white;
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    transition: .5s;
+}
+
+button:hover{
+    letter-spacing: 5px;
+    background-color:#251a77;
+}
+
+.btnsearch{
+    display: flex;
+    justify-content: space-between;
+}
+
+.btnsearch button{
+    width: 45%;
+}
+table{
+    width: 100%;
+    margin: 10px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+th, td{
+  padding: 5px;
+}
+
+#deleteall{
+    margin: 20px 0;
+}
+
+#scrolltop{
+    background-color: #171150;
+    padding: 10px;
+    border-radius: 10px;
+    position: fixed;
+    bottom: 20px;
+    right: 40px;
+    cursor: pointer;
+    transition: .5s;
+}
+
+#scrolltop:hover{
+    background-color:#251a77;
+}
+
+::-webkit-scrollbar{
+    background-color: #251a77;
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #171150;
+    transition: all 1s linear;
+}
