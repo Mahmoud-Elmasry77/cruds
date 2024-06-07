@@ -112,15 +112,26 @@ th, td{
     background-color: #171150;
     transition: all 1s linear;
 }
-
+.pmood{
+    width: 40px;
+    height: 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: 1px solid #000;
+    border-radius: 50px;
+    position: fixed;
+    top: 20px;
+    left:20px;
+    cursor:pointer;
+}
 #mood{
     width: 20px;
     height: 20px;
     background-color: #ffffff;
     color: #000000;
     border-radius: 50%;
-    position: fixed;
     top: 20px;
     left:20px;
     cursor:pointer;
+    transition: .5s;
 }

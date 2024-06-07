@@ -246,34 +246,50 @@ btnscroll.onclick = function(){
     })
 }
 
-let btnmood = document.getElementById("mood")
+let btnmood = document.getElementById("mood");
+let pmood = document.querySelector(".pmood");
+
 let lightmood = window.localStorage.apmood;
 
-if(lightmood == window.localStorage.apmood){
     if(lightmood === "light"){
         document.body.style.background = "#fff";
-        btnmood.style.background = "#111";
         document.body.style.color = "#111";
         total.style.color = "#fff";
-        btnscroll.style.color = "#fff";
+        btnmood.style.cssText = `
+                background-color: #fff;
+                transform : translateX(0);
+            `
+        pmood.style.background = "#111"
+    }else{
+        btnmood.style.cssText = `
+                background-color: #111;
+                transform : translateX(20px);
+            `
+        pmood.style.background = "#fff"
     }
-}
+
 btnmood.onclick = function(){
-    if(window.localStorage.getItem("apmood")){
         if(lightmood === "dark"){
             document.body.style.background = "#fff";
-            btnmood.style.background = "#111";
+            btnmood.style.cssText = `
+                background-color: #fff;
+                transform : translateX(0);
+            `
             document.body.style.color = "#111";
-            total.style.color = "#fff";
+            pmood.style.background = "#111"
             lightmood = "light";
         }else{
             document.body.style.background = "#111";
             btnmood.style.background = "#fff";
             document.body.style.color = "#fff";
-            btnscroll.style.color = "#fff"
+            total.style.color = "#fff";
+            btnmood.style.cssText = `
+                background-color: #111;
+                transform : translateX(20px);
+            `
+            pmood.style.background = "#fff"
             lightmood = "dark"
         }
-    }
     
    window.localStorage.setItem("apmood", lightmood)
 };
