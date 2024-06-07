@@ -132,7 +132,7 @@ function deleteData(i){
 // delete all
 
 function deleteAll(){
-    window.localStorage.clear();
+    window.localStorage.removeItem("product");
     datapro.splice(0);
     showData()
 }
@@ -229,6 +229,7 @@ window.onscroll = function(){
     btnscroll.style.cssText = `
     visibility: visible;
     opacity : 1;
+    color : #fff;
     `
    }else{
     btnscroll.style.cssText = `
@@ -244,3 +245,37 @@ btnscroll.onclick = function(){
         behavior:"smooth"
     })
 }
+
+let btnmood = document.getElementById("mood")
+let lightmood = window.localStorage.apmood;
+
+if(lightmood == window.localStorage.apmood){
+    if(lightmood === "light"){
+        document.body.style.background = "#fff";
+        btnmood.style.background = "#111";
+        document.body.style.color = "#111";
+        total.style.color = "#fff";
+        btnscroll.style.color = "#fff";
+    }
+}
+btnmood.onclick = function(){
+    if(window.localStorage.getItem("apmood")){
+        if(lightmood === "dark"){
+            document.body.style.background = "#fff";
+            btnmood.style.background = "#111";
+            document.body.style.color = "#111";
+            total.style.color = "#fff";
+            lightmood = "light";
+        }else{
+            document.body.style.background = "#111";
+            btnmood.style.background = "#fff";
+            document.body.style.color = "#fff";
+            btnscroll.style.color = "#fff"
+            lightmood = "dark"
+        }
+    }
+    
+   window.localStorage.setItem("apmood", lightmood)
+};
+
+
